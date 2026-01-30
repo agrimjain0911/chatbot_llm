@@ -28,7 +28,7 @@ if "memory" not in st.session_state:
     st.session_state.memory = ConversationBufferMemory(return_messages=True)
 
 # --- Main layout ---
-st.markdown("<h2 style='text-align: left;'>🤖 Bhatambar, Upnishad, Geeta and jain Aagams Chatbot</h2>", unsafe_allow_html=True)
+st.markdown("<h3 style='text-align: left;'>🤖 Bhatambar, Upnishad, Geeta and jain Aagams Chatbot</h3>", unsafe_allow_html=True)
 st.markdown("---")
 
 # --- Display chat history ---
@@ -64,6 +64,7 @@ if user_input and user_input.strip():
         st.session_state.memory.chat_memory.add_user_message(user_input)
 
         st.session_state.memory.chat_memory.add_ai_message(bot_reply)
+
 
 
 
